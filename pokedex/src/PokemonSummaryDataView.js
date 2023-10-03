@@ -16,10 +16,10 @@ export class PokemonSummaryDataView extends React.Component {
                     <img src={ image } alt={this.props.pname} width="64" height="64"/>
                 </div>
                 <div>
-                    name: {this.props.pname}
+                    Name: {this.props.pname}
                 </div>
                 <div>
-                    type: {this.props.ptype}
+                    Type: {this.props.ptype}
                 </div>
             </span>
         )
