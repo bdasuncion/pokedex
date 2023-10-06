@@ -9,7 +9,6 @@ import { PokemonResource } from './PokemonResource';
 
 import { PokemonGridView } from './PokmeonGridView';
 function App() {
-<<<<<<< HEAD
   let [pokemonObjs, setPokemons] = useState([]) 
 
   useEffect(() => {
@@ -19,9 +18,6 @@ function App() {
     })
   }, []);
 
-=======
-  const pokemonObjs = PokemonResource.find()
->>>>>>> refs/remotes/origin/main
   const [nameSearch, setNameSearch] = useState("")
 
   let filtered = pokemonObjs.filter((pokemon) => {
