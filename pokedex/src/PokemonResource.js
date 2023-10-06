@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class PokemonResource {
     static find() {
         let pokemonObjs = require("./pokedex.json")
@@ -5,4 +6,11 @@ export class PokemonResource {
             resolve(pokemonObjs)
         })
     }
+=======
+export class PokemonResource {
+    static find() {
+        let pokemonObjs = require("./pokedex.json")
+        return pokemonObjs
+    }
+>>>>>>> refs/remotes/origin/main
 }
