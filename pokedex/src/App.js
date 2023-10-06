@@ -1,10 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
-=======
-import { useState } from "react";
->>>>>>> refs/remotes/origin/main
 import { PokemonResource } from './PokemonResource';
 
 import { PokemonGridView } from './PokmeonGridView';
