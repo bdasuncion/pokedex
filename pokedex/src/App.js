@@ -1,22 +1,28 @@
 //import logo from './logo.svg';
 import './App.css';
-import { useState, useEffect } from "react";
-import { PokemonResource } from './PokemonResource';
+//import { useState, useEffect } from "react";
+//import { PokemonResource } from './pages/PokemonResource';
 
-import { PokemonGridView } from './PokmeonGridView';
+//import { PokemonGridView } from './pages/PokmeonGridView';
+import { PokemonDetailDataView } from './pages/PokemonDetailDataView';
+import { PokemonAllView } from './pages/PokemonAllView';
+
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
-  let [pokemonObjs, setPokemons] = useState([]) 
+
+  /*let [pokemonObjs, setPokemons] = useState([]) 
 
   useEffect(() => {
     PokemonResource.find()
     .then((pokemons) => {
       setPokemons(pokemons)
     })
-  }, []);
+  }, []);*/
 
-  const [nameSearch, setNameSearch] = useState("")
+  //const [nameSearch, setNameSearch] = useState("")
 
-  let filtered = pokemonObjs.filter((pokemon) => {
+  /*let filtered = pokemonObjs.filter((pokemon) => {
     if (nameSearch === '') {
       return true
     } else if (pokemon.name.english.toLowerCase().includes(nameSearch.toLowerCase()) ||
@@ -24,20 +30,20 @@ function App() {
       return true
     }
     return false
-  })
+  })*/
     
   return (
     <div className="App">
-        <input placeholder="Enter Name or Type" value={ nameSearch } onChange={ onSearch }></input>
-        {
-          <PokemonGridView pokemons={filtered} ></PokemonGridView>
-        }
+        <Routes>
+          <Route path="/" element={<PokemonAllView />} /> 
+          <Route path="/details" element={<PokemonDetailDataView />} />
+      </Routes>
     </div>
   );
 
-  function onSearch(event) {
+  /*function onSearch(event) {
     setNameSearch(event.target.value)
-  }
+  }*/
 }
 
 
